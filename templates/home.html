@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+List
+{% endblock title %}
+
+{% block header %}
+<header>
+    <h1>Home of the Books</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+          
+      </ul>
+    </nav>
+</header>
+{% endblock header %}
+
+{% block content %}
+  <h3>blog list</h3>
+
+  <ul>{% for SeattleBlog in object_list %}
+      <li>SeattleBlog - <a href="{% url 'home' SeattleBlog.pk %}">{{ SeattleBlog.name }}</a></li>
+  {% endfor %}
+  </ul>
+{% endblock content %}

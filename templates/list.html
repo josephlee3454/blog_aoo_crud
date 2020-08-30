@@ -1,0 +1,15 @@
+  
+{% extends 'base.html' %}
+
+{% block title %}
+List
+{% endblock title %}
+
+{% block content %}
+<h3>blog list</h3>
+
+<ul>{% for SeattleBlog in object_list %}
+    <li>SeattleBlog - <a href="{% url 'details' tree.pk %}">{{ tree.name }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}

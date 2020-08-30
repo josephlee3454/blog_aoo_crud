@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block title %}
+  <title>Document</title>
+  {% endblock title %}
+</head>
+<body>
+  {% block header %}
+    <header>
+      <h1>update post</h1>
+    </header>
+  {% endblock header %}
+  
+  {% blcok content %}
+  <h2>welcome to the update page</h2>
+  <form action="" method='POST'>
+    {% csfr_token %}
+    <table> {{form.as_p}} </table>
+    <input type="submit" text='Update Entry'>
+  </form>
+  {% endblock content %}
+</body>
+</html>
